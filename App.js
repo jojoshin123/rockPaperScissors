@@ -18,5 +18,3 @@ function playGame(cpuInput, userInput) {
         return "It's a tie!";
     }
 }
-
-console.log(playGame(computerPlay(), "rOck"))
