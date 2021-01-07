@@ -31,12 +31,64 @@ body {
     right: 20px;
 }
 
-img {
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 300px;
+    right: 20px;
+}
+
+#user-result {
+    animation: userAnimation ease-out 2s;
+    width: 10%;
+    padding: 10px;
+    position: absolute;
+    bottom: 300px;
+    left: 300px;
+}
+
+.user-result-subtitle {
+    animation: userAnimation ease-out 2s;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+.cpu-result-subtitle {
+    animation: cpuAnimation ease-out 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+}
+
+#cpu-result {
+    animation: cpuAnimation ease-out 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    width: 10%;
+    padding: 10px;
+    position: absolute;
+    bottom: 300px;
+    right: 300px;
+}
+
+.img-button {
     width: 10%;
     padding: 10px;
 }
 
-img:hover {
+a {
+    padding: 0px;
+}
+
+.img-button:hover {
     transform: scale(1.1);
     cursor: pointer;
     background-color: rgb(255, 255, 255, 0.65);
@@ -63,11 +115,20 @@ img:hover {
     }
 }
 
-@keyframes fadeInAnimation {
+@keyframes userAnimation {
     0% {
-        opacity: 0;
+        left: -400px;
     }
     100% {
-        opacity: 1;
+        left: 300px;
+    }
+}
+
+@keyframes cpuAnimation {
+    0% {
+        right: -400px;
+    }
+    100% {
+        right: 300px;
     }
 }

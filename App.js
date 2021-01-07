@@ -18,3 +18,16 @@ function playGame(cpuInput, userInput) {
         return "It's a tie!";
     }
 }
+
+function displayResults(cpuInput, userInput) {
+
+}
+
+let buttons = document.querySelectorAll("img");
+
+buttons.forEach((img) => {
+    img.addEventListener("click", () => {
+        const name = img.alt;
+        playGame(computerPlay(), name)
+    })
+});
