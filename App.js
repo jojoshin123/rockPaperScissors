@@ -6,6 +6,7 @@ function computerPlay() {
 
 function playGame(cpuInput, userInput) {
     const formatInput = userInput.charAt(0).toUpperCase() + userInput.toLowerCase().slice(1);
+    displayResults(cpuInput, userInput);
     if ((formatInput === "Rock" && cpuInput === "Scissors") ||
         (formatInput === "Scissors" && cpuInput === "Paper") ||
         (formatInput === "Paper" && cpuInput === "Rock")) {
@@ -20,7 +21,8 @@ function playGame(cpuInput, userInput) {
 }
 
 function displayResults(cpuInput, userInput) {
-
+    document.getElementById("user-result").src = `${userInput}.png`
+    document.getElementById("cpu-result").src = `${cpuInput}.png`
 }
 
 let buttons = document.querySelectorAll("img");
