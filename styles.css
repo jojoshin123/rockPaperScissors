@@ -93,6 +93,33 @@ body {
     transition: all ease-out 0.1s;
 }
 
+#final-score {
+    animation: fadeInAnimation 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    position: relative;
+    top: 420px;
+}
+
+button {
+    animation: fadeInAnimation 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    position: relative;
+    top: 450px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(224, 224, 187);
+    padding: 0px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all ease-out 0.3s;
+}
+
 @keyframes slideDownAnimation {
     0% {
         top: -200px;
@@ -126,5 +153,14 @@ body {
     }
     100% {
         right: 300px;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

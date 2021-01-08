@@ -25,11 +25,15 @@ function displayResults(cpuInput, userInput) {
     document.getElementById("cpu-result").src = `${cpuInput}.png`
 }
 
-let buttons = document.querySelectorAll("img");
+let images = document.querySelectorAll("img");
 
-buttons.forEach((img) => {
+images.forEach((img) => {
     img.addEventListener("click", () => {
-        const name = img.alt;
-        playGame(computerPlay(), name)
-    })
+        sessionStorage.setItem("user", img.alt);
+    });
 });
+
+if (window.location.href.match('results.html') != null) {
+    const name = sessionStorage.getItem("user");
+    document.getElementById("final-score").innerHTML = playGame(computerPlay(), name);
+}
